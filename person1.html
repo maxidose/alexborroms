@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person 1 - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="person1.html">@Alex</a></li>
+            <li><a href="person2.html">@Mj</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Mhar Vincent Abobo</h1>
+        <div class="work-gallery">
+            <div class="work-item" onclick="toggleExpand('aboutMe')">
+                <img src="2a.jpg" alt="About Me">
+                <h3>About Me</h3>
+                <p>Click to learn more about me.</p>
+                <div id="aboutMe" class="expandable-content">
+                    <p>A passionate IT student with a flair for creativity, Abobo Mhar Vincent D. is carving out a niche in the world of videography and photography. His technical expertise and artistic vision come together seamlessly, allowing him to excel in video and photo editing.</p>
+                    <p>With a keen eye for detail and a drive for perfection, Abobo is dedicated to capturing moments and crafting compelling narratives through his lens. His enthusiasm extends to local event production, where he brings a unique blend of technical skill and creative insight to make every event memorable.</p>
+                    <p>Whether behind the camera or behind the scenes, Abobo is committed to delivering high-quality content and exceptional experiences. Keep an eye out for his work—you won’t want to miss it!</p>        
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('contacts')">
+                <img src="acontact.jpg" alt="Contacts">
+                <h3>Contacts</h3>
+                <p>Click to view my contact information.</p>
+                <div id="contacts" class="expandable-content">
+                    <img src="acontact.jpg" alt="contacts">
+                    <p>Contact Number: +639487647097</p>
+                    <p>Email: <a href="mailto:travisbrown1616@gmail.com">travisbrown1616@gmail.com</a></p>
+                    <p>Facebook: <a href="https://www.facebook.com/alexgrandealex/" target="_blank">Alex Grande</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/lxgrnd" target="_blank">@lxgrnd</a></p>
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('personalInfo')">
+                <h3>Personal Info (Summary)</h3>
+                <p>Click to view my personal information.</p>
+                <div id="personalInfo" class="expandable-content">
+                    <p>Name: Mhar Vincent Dandoy Abobo</p>
+                    <p>Nickname: Alex / Vincent</p>
+                    <p>Born: April 16, 2004 in San Rafael Roxas, Isabela</p>
+                    <p>Currently Studying at Isabela State University - Roxas Campus (Bachelor of Science in Information Technology - Under Graduate)</p>
+                    <p>Age: 20 Years Old</p>
+                </div>
+            </div>
+
+            <div class="work-item music-item">
+                <audio controls>
+                    <source src="Post Malone, Swae Lee - Sunflower (Spider-Man_ Into the Spider-Verse) (Official Video).mp3" type="audio/mp3">
+                    Your browser does not support the audio tag.
+                </audio>
+                <h4>Sunflower by Poste Malone & Swae lee</h4>
+                <h3>Listen to my favorite song</h3>
+                <p>I hope you enjoy this track!</p>
+            </div>
+
+            
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Vincent Abobo. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/alexgrandealex/" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/lxgrnd" target="_blank">Instagram</a> |
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleExpand(id) {
+            const content = document.getElementById(id);
+            const allContents = document.querySelectorAll('.expandable-content');
+
+            // Close all other expandable contents
+            allContents.forEach((section) => {
+                if (section !== content) {
+                    section.classList.remove('expanded');
+                }
+            });
+
+            // Toggle the selected content
+            content.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>

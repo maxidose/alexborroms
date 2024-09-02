@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person 1 - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="person1.html">@Alex</a></li>
+            <li><a href="person2.html">@Mj</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Mark Joshua Borromeo</h1>
+        <div class="work-gallery">
+            <div class="work-item" onclick="toggleExpand('aboutMe')">
+                <img src="borroms2.jpg" alt="About Me">
+                <h3>About Me</h3>
+                <p>Click to learn more about me.</p>
+                <div id="aboutMe" class="expandable-content">
+                    <p>Playing online games has become one of my favorite pastimes. For me, Mark Joshua M. Borromeo, it's a fantastic way to relax and take a break from my daily routine. Whether I'm waiting for something or just need a quick escape from the stresses of life, the convenience of online gaming allows me to dive into different worlds and adventures no matter where I am. It's the perfect way to unwind and enjoy some downtime, fitting seamlessly into my schedule.</p>
+                    <p>Watching movies is another cherished way for me to relax, especially after a long day. There’s something truly special about getting lost in a different world, whether it's through a thrilling action-packed film or a deeply moving drama. I relish the process of selecting a movie, preparing some snacks, and settling in for a complete cinematic experience. It’s a wonderful escape from studying or other responsibilities, offering a chance to recharge and have some fun.</p>        
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('contacts')">
+                <img src="jcontact.jpg" alt="Contacts">
+                <h3>Contacts</h3>
+                <p>Click to view my contact information.</p>
+                <div id="contacts" class="expandable-content">
+                    <p>Email: <a href="mailto:mjborromeo2002@gmail.com">mjborromeo2002@gmail.com</a></p>
+                    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100004882457905" target="_blank">Mark Joshua Borromeo</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/datttboiii.juswaaa" target="_blank">@datttboiii.juswaaa</a></p>
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('personalInfo')">
+                <h3>Personal Info (Summary)</h3>
+                <p>Click to view my personal information.</p>
+                <div id="personalInfo" class="expandable-content">
+                    <p>Name: Mark Joshua S. Borromeo</p>
+                    <p>Nickname: Borroms / emje</p>
+                    <p>Born: October 5, 2002 in Burgos, Isabela</p>
+                    <p>Currently Studying at Isabela State University - Roxas Campus (Bachelor of Science in Information Technology - Under Graduate)</p>
+                    <p>Age: 21 Years Old</p>
+                </div>
+            </div>
+
+            <div class="work-item music-item">
+                <audio controls>
+                    <source src="yaeow - favorite lesson (Official Lyric Video).mp3" type="audio/mp3">
+                    Your browser does not support the audio tag.
+                </audio>
+                <h4>Favorite Lesson by yaeow</h4>
+                <h3>Listen to my favorite song</h3>
+                <p>I hope you enjoy this track!</p>
+            </div>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Joshua Borromeo. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100004882457905" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/datttboiii.juswaaa" target="_blank">Instagram</a> |
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleExpand(id) {
+            const content = document.getElementById(id);
+            const allContents = document.querySelectorAll('.expandable-content');
+
+            // Close all other expandable contents
+            allContents.forEach((section) => {
+                if (section !== content) {
+                    section.classList.remove('expanded');
+                }
+            });
+
+            // Toggle the selected content
+            content.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
